@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4537328D-A356-4DB0-9178-6B42AA7E3BE2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>YooAsset</RootNamespace>
+    <AssemblyName>YooAsset</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Il2CppDummyDll">
+      <HintPath>..\..\6.7.46\DummyDll\Il2CppDummyDll.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\6.7.46\DummyDll\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>..\..\6.7.46\DummyDll\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\..\6.7.46\DummyDll\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\6.7.46\DummyDll\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>..\..\6.7.46\DummyDll\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\..\6.7.46\DummyDll\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllAssetsHandle.cs" />
+    <Compile Include="AppFootPrint.cs" />
+    <Compile Include="AssetBundleFileLoader.cs" />
+    <Compile Include="AssetBundleWebLoader.cs" />
+    <Compile Include="AssetBundleWebRequest.cs" />
+    <Compile Include="AssetHandle.cs" />
+    <Compile Include="AssetInfo.cs" />
+    <Compile Include="AsyncOperationBase.cs" />
+    <Compile Include="BufferReader.cs" />
+    <Compile Include="BufferWriter.cs" />
+    <Compile Include="BundledAllAssetsProvider.cs" />
+    <Compile Include="BundledAssetProvider.cs" />
+    <Compile Include="BundledRawFileProvider.cs" />
+    <Compile Include="BundledSceneProvider.cs" />
+    <Compile Include="BundledSubAssetsProvider.cs" />
+    <Compile Include="BundleInfo.cs" />
+    <Compile Include="BundleLoaderBase.cs" />
+    <Compile Include="CacheFileInfo.cs" />
+    <Compile Include="CacheHelper.cs" />
+    <Compile Include="CacheManager.cs" />
+    <Compile Include="ClearAllCacheFilesOperation.cs" />
+    <Compile Include="ClearUnusedCacheFilesOperation.cs" />
+    <Compile Include="CompletedDownloader.cs" />
+    <Compile Include="CompletedProvider.cs" />
+    <Compile Include="CRC32Algorithm.cs" />
+    <Compile Include="DatabaseAllAssetsProvider.cs" />
+    <Compile Include="DatabaseAssetProvider.cs" />
+    <Compile Include="DatabaseRawFileProvider.cs" />
+    <Compile Include="DatabaseSceneProvider.cs" />
+    <Compile Include="DatabaseSubAssetsProvider.cs" />
+    <Compile Include="DebugBundleInfo.cs" />
+    <Compile Include="DebugPackageData.cs" />
+    <Compile Include="DebugProviderInfo.cs" />
+    <Compile Include="DebugReport.cs" />
+    <Compile Include="DecryptFileInfo.cs" />
+    <Compile Include="DeliveryFileInfo.cs" />
+    <Compile Include="DependAssetBundles.cs" />
+    <Compile Include="DeserializeManifestOperation.cs" />
+    <Compile Include="DownloaderBase.cs" />
+    <Compile Include="DownloaderOperation.cs" />
+    <Compile Include="DownloadHandlerFileRange.cs" />
+    <Compile Include="DownloadHelper.cs" />
+    <Compile Include="DownloadManager.cs" />
+    <Compile Include="DownloadManifestOperation.cs" />
+    <Compile Include="DownloadRequestDelegate.cs" />
+    <Compile Include="DownloadStatus.cs" />
+    <Compile Include="EDefaultBuildPipeline.cs" />
+    <Compile Include="EditorPlayModePreDownloadContentOperation.cs" />
+    <Compile Include="EditorPlayModeUpdatePackageManifestOperation.cs" />
+    <Compile Include="EditorPlayModeUpdatePackageVersionOperation.cs" />
+    <Compile Include="EditorSimulateModeHelper.cs" />
+    <Compile Include="EditorSimulateModeImpl.cs" />
+    <Compile Include="EditorSimulateModeInitializationOperation.cs" />
+    <Compile Include="EditorSimulateModeParameters.cs" />
+    <Compile Include="EncryptFileInfo.cs" />
+    <Compile Include="EncryptResult.cs" />
+    <Compile Include="EOperationStatus.cs" />
+    <Compile Include="EPlayMode.cs" />
+    <Compile Include="ERemoteCommand.cs" />
+    <Compile Include="ERequestStatus.cs" />
+    <Compile Include="EVerifyLevel.cs" />
+    <Compile Include="EVerifyResult.cs" />
+    <Compile Include="FileDownloader.cs" />
+    <Compile Include="FileGeneralRequest.cs" />
+    <Compile Include="FileResumeRequest.cs" />
+    <Compile Include="FileUtility.cs" />
+    <Compile Include="FindCacheFilesOperation.cs" />
+    <Compile Include="GameAsyncOperation.cs" />
+    <Compile Include="HandleBase.cs" />
+    <Compile Include="HashUtility.cs" />
+    <Compile Include="HostPlayModeImpl.cs" />
+    <Compile Include="HostPlayModeInitializationOperation.cs" />
+    <Compile Include="HostPlayModeParameters.cs" />
+    <Compile Include="HostPlayModePreDownloadContentOperation.cs" />
+    <Compile Include="HostPlayModeUpdatePackageManifestOperation.cs" />
+    <Compile Include="HostPlayModeUpdatePackageVersionOperation.cs" />
+    <Compile Include="IBuildinQueryServices.cs" />
+    <Compile Include="IBundleQuery.cs" />
+    <Compile Include="IDecryptionServices.cs" />
+    <Compile Include="IDeliveryLoadServices.cs" />
+    <Compile Include="IDeliveryQueryServices.cs" />
+    <Compile Include="IEncryptionServices.cs" />
+    <Compile Include="ILogger.cs" />
+    <Compile Include="InitializationOperation.cs" />
+    <Compile Include="InitializeParameters.cs" />
+    <Compile Include="InstantiateOperation.cs" />
+    <Compile Include="IPlayMode.cs" />
+    <Compile Include="IRemoteServices.cs" />
+    <Compile Include="IWebRequester.cs" />
+    <Compile Include="LoadBuildinManifestOperation.cs" />
+    <Compile Include="LoadCacheManifestOperation.cs" />
+    <Compile Include="LoadEditorManifestOperation.cs" />
+    <Compile Include="LoadRemoteManifestOperation.cs" />
+    <Compile Include="ManifestTools.cs" />
+    <Compile Include="OfflinePlayModeImpl.cs" />
+    <Compile Include="OfflinePlayModeInitializationOperation.cs" />
+    <Compile Include="OfflinePlayModeParameters.cs" />
+    <Compile Include="OfflinePlayModePreDownloadContentOperation.cs" />
+    <Compile Include="OfflinePlayModeUpdatePackageManifestOperation.cs" />
+    <Compile Include="OfflinePlayModeUpdatePackageVersionOperation.cs" />
+    <Compile Include="OperationSystem.cs" />
+    <Compile Include="PackageAsset.cs" />
+    <Compile Include="PackageBundle.cs" />
+    <Compile Include="PackageCachingOperation.cs" />
+    <Compile Include="PackageManifest.cs" />
+    <Compile Include="PathUtility.cs" />
+    <Compile Include="PersistentHelper.cs" />
+    <Compile Include="PersistentManager.cs" />
+    <Compile Include="PreDownloadContentOperation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProviderBase.cs" />
+    <Compile Include="QueryBuildinPackageVersionOperation.cs" />
+    <Compile Include="QueryCachePackageHashOperation.cs" />
+    <Compile Include="QueryCachePackageVersionOperation.cs" />
+    <Compile Include="QueryRemotePackageHashOperation.cs" />
+    <Compile Include="QueryRemotePackageVersionOperation.cs" />
+    <Compile Include="RawBundleFileLoader.cs" />
+    <Compile Include="RawBundleWebLoader.cs" />
+    <Compile Include="RawFileHandle.cs" />
+    <Compile Include="RemoteCommand.cs" />
+    <Compile Include="RemoteDebuggerDefine.cs" />
+    <Compile Include="RemoteDebuggerInRuntime.cs" />
+    <Compile Include="RequestHelper.cs" />
+    <Compile Include="ResourceAssist.cs" />
+    <Compile Include="ResourceDownloaderOperation.cs" />
+    <Compile Include="ResourceImporterOperation.cs" />
+    <Compile Include="ResourceLoader.cs" />
+    <Compile Include="ResourceManager.cs" />
+    <Compile Include="ResourcePackage.cs" />
+    <Compile Include="ResourceUnpackerOperation.cs" />
+    <Compile Include="SafeProxy.cs" />
+    <Compile Include="SceneHandle.cs" />
+    <Compile Include="ShaderInfo.cs" />
+    <Compile Include="ShaderManifest.cs" />
+    <Compile Include="StringUtility.cs" />
+    <Compile Include="SubAssetsHandle.cs" />
+    <Compile Include="ThreadSyncContext.cs" />
+    <Compile Include="UnityWebDataRequester.cs" />
+    <Compile Include="UnityWebFileRequester.cs" />
+    <Compile Include="UnityWebRequesterBase.cs" />
+    <Compile Include="UnloadSceneOperation.cs" />
+    <Compile Include="UnpackBuildinManifestOperation.cs" />
+    <Compile Include="UpdatePackageManifestOperation.cs" />
+    <Compile Include="UpdatePackageVersionOperation.cs" />
+    <Compile Include="VerifyCacheFileElement.cs" />
+    <Compile Include="VerifyCacheFilesOperation.cs" />
+    <Compile Include="VerifyCacheFilesWithoutThreadOperation.cs" />
+    <Compile Include="VerifyCacheFilesWithThreadOperation.cs" />
+    <Compile Include="VerifyTempFileElement.cs" />
+    <Compile Include="VerifyTempFileOperation.cs" />
+    <Compile Include="VerifyTempFileWithoutThreadOperation.cs" />
+    <Compile Include="VerifyTempFileWithThreadOperation.cs" />
+    <Compile Include="VirtualBundleFileLoader.cs" />
+    <Compile Include="VirtualFileManager.cs" />
+    <Compile Include="VirtualFileMeta.cs" />
+    <Compile Include="VirtualManifest.cs" />
+    <Compile Include="WebDownloader.cs" />
+    <Compile Include="WebPlayModeImpl.cs" />
+    <Compile Include="WebPlayModeInitializationOperation.cs" />
+    <Compile Include="WebPlayModeParameters.cs" />
+    <Compile Include="WebPlayModePreDownloadContentOperation.cs" />
+    <Compile Include="WebPlayModeUpdatePackageManifestOperation.cs" />
+    <Compile Include="WebPlayModeUpdatePackageVersionOperation.cs" />
+    <Compile Include="YooAssets.cs" />
+    <Compile Include="YooAssetsDriver.cs" />
+    <Compile Include="YooAssetSettings.cs" />
+    <Compile Include="YooAssetSettingsData.cs" />
+    <Compile Include="YooLogger.cs" />
+    <Compile Include="YooUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XGameFramework\XGameFramework.csproj">
+      <Project>{4537328d-a356-4db0-9178-6b42aa7e3be1}</Project>
+      <Name>XGameFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

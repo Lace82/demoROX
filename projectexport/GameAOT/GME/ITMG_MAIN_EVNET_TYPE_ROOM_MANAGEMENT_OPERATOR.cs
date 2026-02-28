@@ -1,0 +1,38 @@
+﻿using System;
+using Il2CppDummyDll;
+
+namespace GME
+{
+	// Token: 0x0200009B RID: 155
+	[Token(Token = "0x2000070")]
+	public enum ITMG_MAIN_EVNET_TYPE_ROOM_MANAGEMENT_OPERATOR
+	{
+		// Token: 0x040002DA RID: 730
+		[Token(Token = "0x400021C")]
+		ITMG_ROOM_MANAGEMENT_CAPTURE_OP,
+		// Token: 0x040002DB RID: 731
+		[Token(Token = "0x400021D")]
+		ITMG_ROOM_MANAGEMENT_PLAY_OP,
+		// Token: 0x040002DC RID: 732
+		[Token(Token = "0x400021E")]
+		ITMG_ROOM_MANAGEMENT_AUDIO_SEND_OP,
+		// Token: 0x040002DD RID: 733
+		[Token(Token = "0x400021F")]
+		ITMG_ROOM_MANAGEMENT_AUDIO_REC_OP,
+		// Token: 0x040002DE RID: 734
+		[Token(Token = "0x4000220")]
+		ITMG_ROOM_MANAGEMENT_MIC_OP,
+		// Token: 0x040002DF RID: 735
+		[Token(Token = "0x4000221")]
+		ITMG_ROOM_MANAGEMENT_SPEAKER_OP,
+		// Token: 0x040002E0 RID: 736
+		[Token(Token = "0x4000222")]
+		ITMG_ROOM_MANAGEMENT_GET_MIC_STATE,
+		// Token: 0x040002E1 RID: 737
+		[Token(Token = "0x4000223")]
+		ITMG_ROOM_MANAGEMENT_GET_SPEAKER_STATE,
+		// Token: 0x040002E2 RID: 738
+		[Token(Token = "0x4000224")]
+		ITMG_ROOM_MANAGERMENT_FOBIN_OP
+	}
+}

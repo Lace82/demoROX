@@ -1,0 +1,26 @@
+﻿using System;
+using Il2CppDummyDll;
+
+namespace GME
+{
+	// Token: 0x020000A3 RID: 163
+	[Token(Token = "0x2000078")]
+	public enum ITMG_USER_AGE_DETECTED_RESULT
+	{
+		// Token: 0x0400030C RID: 780
+		[Token(Token = "0x400024E")]
+		AV_ERR_AGE_DETECTED_SUCCESS_USER_CHILD = 730000,
+		// Token: 0x0400030D RID: 781
+		[Token(Token = "0x400024F")]
+		AV_ERR_AGE_DETECTED_SUCCESS_USER_ADULT,
+		// Token: 0x0400030E RID: 782
+		[Token(Token = "0x4000250")]
+		AV_ERR_AGE_DETECTED_SUCCESS_USER_TEENAGER,
+		// Token: 0x0400030F RID: 783
+		[Token(Token = "0x4000251")]
+		AV_ERR_AGE_DETECTED_INTERNAL_ERROR,
+		// Token: 0x04000310 RID: 784
+		[Token(Token = "0x4000252")]
+		AV_ERR_AGE_DETECTED_USER_SILENCE
+	}
+}

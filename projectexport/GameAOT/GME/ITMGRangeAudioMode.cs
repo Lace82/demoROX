@@ -1,0 +1,41 @@
+﻿using System;
+using Il2CppDummyDll;
+
+namespace GME
+{
+	// Token: 0x0200009D RID: 157
+	[Token(Token = "0x2000072")]
+	public enum ITMGRangeAudioMode
+	{
+		// Token: 0x040002E7 RID: 743
+		[Token(Token = "0x4000229")]
+		ITMG_RANGE_AUDIO_MODE_WORLD,
+		// Token: 0x040002E8 RID: 744
+		[Token(Token = "0x400022A")]
+		ITMG_RANGE_AUDIO_MODE_TEAM,
+		// Token: 0x040002E9 RID: 745
+		[Token(Token = "0x400022B")]
+		ITMG_RANGE_AUDIO_MODE_SND_TEAM_REC_TEAM = 100,
+		// Token: 0x040002EA RID: 746
+		[Token(Token = "0x400022C")]
+		ITMG_RANGE_AUDIO_MODE_SND_TEAM_REC_PROX,
+		// Token: 0x040002EB RID: 747
+		[Token(Token = "0x400022D")]
+		ITMG_RANGE_AUDIO_MODE_SND_TEAM_REC_BOTH,
+		// Token: 0x040002EC RID: 748
+		[Token(Token = "0x400022E")]
+		ITMG_RANGE_AUDIO_MODE_SND_PROX_REC_TEAM,
+		// Token: 0x040002ED RID: 749
+		[Token(Token = "0x400022F")]
+		ITMG_RANGE_AUDIO_MODE_SND_PROX_REC_PROX,
+		// Token: 0x040002EE RID: 750
+		[Token(Token = "0x4000230")]
+		ITMG_RANGE_AUDIO_MODE_SND_PROX_REC_BOTH,
+		// Token: 0x040002EF RID: 751
+		[Token(Token = "0x4000231")]
+		ITMG_RANGE_AUDIO_MODE_SND_BOTH_REC_BOTH,
+		// Token: 0x040002F0 RID: 752
+		[Token(Token = "0x4000232")]
+		ITMG_RANGE_AUDIO_MODE_SND_BOTH_REC_TEAM
+	}
+}

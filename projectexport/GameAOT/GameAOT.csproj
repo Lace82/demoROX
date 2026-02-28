@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4537328D-A356-4DB0-9178-6B42AA7E3BE0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GameAOT</RootNamespace>
+    <AssemblyName>GameAOT</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="COSXML">
+      <HintPath>..\..\6.7.46\DummyDll\COSXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>..\..\6.7.46\DummyDll\DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppDummyDll">
+      <HintPath>..\..\6.7.46\DummyDll\Il2CppDummyDll.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJson">
+      <HintPath>..\..\6.7.46\DummyDll\LitJson.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\6.7.46\DummyDll\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>..\..\6.7.46\DummyDll\System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask">
+      <HintPath>..\..\6.7.46\DummyDll\UniTask.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>..\..\6.7.46\DummyDll\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\..\6.7.46\DummyDll\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\6.7.46\DummyDll\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\6.7.46\DummyDll\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\6.7.46\DummyDll\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\..\6.7.46\DummyDll\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>..\..\6.7.46\DummyDll\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="ZFBrowser">
+      <HintPath>..\..\6.7.46\DummyDll\ZFBrowser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="-PrivateImplementationDetails-.cs" />
+    <Compile Include="Code\GameAot\SDK\LoginResultData.cs" />
+    <Compile Include="Code\GameAot\SDK\PlatformManagerAOT.cs" />
+    <Compile Include="Code\GameAot\SDK\QuickEventHandlerAOT.cs" />
+    <Compile Include="Code\GameAot\SDK\QuickSDKManagerAOT.cs" />
+    <Compile Include="Code\GameAot\Utility\CrashSightInit.cs" />
+    <Compile Include="CrashSightAgent.cs" />
+    <Compile Include="CrashSightCallback.cs" />
+    <Compile Include="CrashSightLogCallback.cs" />
+    <Compile Include="CrashSightSDKEditor\XUPorterJSON\MiniJSON.cs" />
+    <Compile Include="CrashSightSDKEditor\XUPorterJSON\MiniJsonExtensions.cs" />
+    <Compile Include="CSLogSeverity.cs" />
+    <Compile Include="CustomQCloudCredentialProvider.cs" />
+    <Compile Include="GCloud\UQM\MiniJSON\Json.cs" />
+    <Compile Include="GCloud\UQM\OnUQMRetEventHandler.cs" />
+    <Compile Include="GCloud\UQM\OnUQMRetLogUploadEventHandler.cs" />
+    <Compile Include="GCloud\UQM\OnUQMStringRetEventHandler.cs" />
+    <Compile Include="GCloud\UQM\OnUQMStringRetSetLogPathEventHandler.cs" />
+    <Compile Include="GCloud\UQM\RetArgsWrapper.cs" />
+    <Compile Include="GCloud\UQM\UQM.cs" />
+    <Compile Include="GCloud\UQM\UQMCrash.cs" />
+    <Compile Include="GCloud\UQM\UQMCrashLevel.cs" />
+    <Compile Include="GCloud\UQM\UQMLog.cs" />
+    <Compile Include="GCloud\UQM\UQMMessageCenter.cs" />
+    <Compile Include="GCloud\UQM\UQMMethodNameID.cs" />
+    <Compile Include="GME\Audio_Data_Type.cs" />
+    <Compile Include="GME\GMECustomStreamFrame.cs" />
+    <Compile Include="GME\ITMGAudioCtrl.cs" />
+    <Compile Include="GME\ITMGAudioDataObserver.cs" />
+    <Compile Include="GME\ITMGAudioEffectCtrl.cs" />
+    <Compile Include="GME\ITMGAudioRecordCtrl.cs" />
+    <Compile Include="GME\ITMGContext.cs" />
+    <Compile Include="GME\ITMGFaceTracker.cs" />
+    <Compile Include="GME\ITMGPoseTracker.cs" />
+    <Compile Include="GME\ITMGPTT.cs" />
+    <Compile Include="GME\ITMGRangeAudioMode.cs" />
+    <Compile Include="GME\ITMGRecordingType.cs" />
+    <Compile Include="GME\ITMGRoom.cs" />
+    <Compile Include="GME\ITMGRoomManager.cs" />
+    <Compile Include="GME\ITMGRoomType.cs" />
+    <Compile Include="GME\ITMG_AUDIO_MEMBER_ROLE.cs" />
+    <Compile Include="GME\ITMG_CHECK_MIC_STATUS.cs" />
+    <Compile Include="GME\ITMG_CUSTOMDATA_SUB_EVENT.cs" />
+    <Compile Include="GME\ITMG_IMG_FORMAT.cs" />
+    <Compile Include="GME\ITMG_IMG_ORIENTATION.cs" />
+    <Compile Include="GME\ITMG_MAIN_EVENT_TYPE.cs" />
+    <Compile Include="GME\ITMG_MAIN_EVNET_TYPE_ROOM_MANAGEMENT_OPERATOR.cs" />
+    <Compile Include="GME\ITMG_RECORD_PERMISSION.cs" />
+    <Compile Include="GME\ITMG_SERVER_AUDIO_ROUTE_RECV_TYPE.cs" />
+    <Compile Include="GME\ITMG_SERVER_AUDIO_ROUTE_SEND_TYPE.cs" />
+    <Compile Include="GME\ITMG_USER_AGE_DETECTED_RESULT.cs" />
+    <Compile Include="GME\ITMG_VOICE_TYPE_EQUALIZER.cs" />
+    <Compile Include="GME\ITMG_VOICE_TYPE_REVERB.cs" />
+    <Compile Include="GME\PoseEuler.cs" />
+    <Compile Include="GME\PoseLM.cs" />
+    <Compile Include="GME\QAVAccompanyFileCompleteHandler.cs" />
+    <Compile Include="GME\QAVAudioCallback.cs" />
+    <Compile Include="GME\QAVAudioCtrl.cs" />
+    <Compile Include="GME\QAVAudioDataCallback.cs" />
+    <Compile Include="GME\QAVAudioDataCallbackInner.cs" />
+    <Compile Include="GME\QAVAudioDataObserver.cs" />
+    <Compile Include="GME\QAVAudioEffectCtrl.cs" />
+    <Compile Include="GME\QAVAudioIOSMuteSwitchResultCallback.cs" />
+    <Compile Include="GME\QAVAudioReadyCallback.cs" />
+    <Compile Include="GME\QAVAudioRecordCallback.cs" />
+    <Compile Include="GME\QAVAudioRecordCtrl.cs" />
+    <Compile Include="GME\QAVAudioRecordMixCallback.cs" />
+    <Compile Include="GME\QAVAudioRecordPreviewCallback.cs" />
+    <Compile Include="GME\QAVAudioRouteChangeCallback.cs" />
+    <Compile Include="GME\QAVAuthBuffer.cs" />
+    <Compile Include="GME\QAVCallback.cs" />
+    <Compile Include="GME\QAVCommonEventCallback.cs" />
+    <Compile Include="GME\QAVContext.cs" />
+    <Compile Include="GME\QAVCustomStreamDataCallback.cs" />
+    <Compile Include="GME\QAVCustomStreamDataCallbackInner.cs" />
+    <Compile Include="GME\QAVDownloadFileCompleteCallback.cs" />
+    <Compile Include="GME\QAVDownloadFileWithAuditCompleteCallback.cs" />
+    <Compile Include="GME\QAVEndpointsUpdateInfo.cs" />
+    <Compile Include="GME\QAVEnterRoomComplete.cs" />
+    <Compile Include="GME\QAVError.cs" />
+    <Compile Include="GME\QAVExitRoomComplete.cs" />
+    <Compile Include="GME\QAVFaceTracker.cs" />
+    <Compile Include="GME\QAVFetchVoiceChangerListCallback.cs" />
+    <Compile Include="GME\QAVNative.cs" />
+    <Compile Include="GME\QAVOnDeviceStateChangedEvent.cs" />
+    <Compile Include="GME\QAVOnEventCallBack.cs" />
+    <Compile Include="GME\QAVOnRoomTypeChangedEvent.cs" />
+    <Compile Include="GME\QAVPlayFileCompleteCallback.cs" />
+    <Compile Include="GME\QAVPoseTracker.cs" />
+    <Compile Include="GME\QAVPTT.cs" />
+    <Compile Include="GME\QAVRecordFileCompleteCallback.cs" />
+    <Compile Include="GME\QAVRoom.cs" />
+    <Compile Include="GME\QAVRoomChangeQualityCallback.cs" />
+    <Compile Include="GME\QAVRoomDisconnect.cs" />
+    <Compile Include="GME\QAVRoomManager.cs" />
+    <Compile Include="GME\QAVSDKInit.cs" />
+    <Compile Include="GME\QAVSpeechToTextCallback.cs" />
+    <Compile Include="GME\QAVSpeechToTextWithAuditCallback.cs" />
+    <Compile Include="GME\QAVSpeechToTextWithTargetTextCallback.cs" />
+    <Compile Include="GME\QAVStreamingRecognitionCallback.cs" />
+    <Compile Include="GME\QAVStreamingRecognitionNativeCallback.cs" />
+    <Compile Include="GME\QAVTextToSpeechCallback.cs" />
+    <Compile Include="GME\QAVTranslateTextCallback.cs" />
+    <Compile Include="GME\QAVUploadFileCompleteCallback.cs" />
+    <Compile Include="GME\TMGAudioDeviceInfo.cs" />
+    <Compile Include="GME\TMGFaceTrackerFaceInfo.cs" />
+    <Compile Include="GME\TMGFaceTrackerParam.cs" />
+    <Compile Include="GME\TMGPoseTrackerPoseInfo.cs" />
+    <Compile Include="HeartBeatCmdID.cs" />
+    <Compile Include="KeepResInApk.cs" />
+    <Compile Include="MyGetToken.cs" />
+    <Compile Include="MyHtpCallback.cs" />
+    <Compile Include="NetEase\AntiCheatResult.cs" />
+    <Compile Include="NetEase\GetTokenCallback.cs" />
+    <Compile Include="NetEase\HTPCallback.cs" />
+    <Compile Include="NetEase\HTProtectConfig.cs" />
+    <Compile Include="NetEase\InfoReceiver.cs" />
+    <Compile Include="NetEase\NetHeartBeat.cs" />
+    <Compile Include="NetEase\SafeCommResult.cs" />
+    <Compile Include="NetSecProtect.cs" />
+    <Compile Include="NLPC\E_Feature.cs" />
+    <Compile Include="NLPC\FREEBUFFERCALLBACK.cs" />
+    <Compile Include="NLPC\GameSetInfo.cs" />
+    <Compile Include="NLPC\GETTOKENASYNCCALLBACK.cs" />
+    <Compile Include="NLPC\GETTOKENCALLBACK.cs" />
+    <Compile Include="NLPC\GuardClient.cs" />
+    <Compile Include="NLPC\INITAPPCALLBACK.cs" />
+    <Compile Include="NLPC\INITSDKCALLBACK.cs" />
+    <Compile Include="NLPC\INSTALLRESULT.cs" />
+    <Compile Include="NLPC\INSTALLTRANSCALLBACK.cs" />
+    <Compile Include="NLPC\IOCTLCALLBACK.cs" />
+    <Compile Include="NLPC\LaunchStub.cs" />
+    <Compile Include="NLPC\LightHouse.cs" />
+    <Compile Include="NLPC\MyAtomic.cs" />
+    <Compile Include="NLPC\NativeMethods.cs" />
+    <Compile Include="NLPC\NEPRESULT.cs" />
+    <Compile Include="NLPC\NEPSTATUS.cs" />
+    <Compile Include="NLPC\NEPStatusCallback.cs" />
+    <Compile Include="NLPC\PipeClient.cs" />
+    <Compile Include="NLPC\PipeGuard.cs" />
+    <Compile Include="NLPC\SdkFuncFactory.cs" />
+    <Compile Include="NLPC\ServerType.cs" />
+    <Compile Include="NLPC\SETROLEINFOCALLBACK.cs" />
+    <Compile Include="NLPC\SharingMem.cs" />
+    <Compile Include="NLPC\StatusChecker.cs" />
+    <Compile Include="NLPC\TOKENCALLBACK.cs" />
+    <Compile Include="NLPC\TRANSCALLBACK.cs" />
+    <Compile Include="PDCommandUI.cs" />
+    <Compile Include="PDSDK.cs" />
+    <Compile Include="PDSDK_PC.cs" />
+    <Compile Include="PDWebCallBackHandler.cs" />
+    <Compile Include="PDWebViewManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="quicksdk\BindUserInfo.cs" />
+    <Compile Include="quicksdk\ErrorMsg.cs" />
+    <Compile Include="quicksdk\GameRoleInfo.cs" />
+    <Compile Include="quicksdk\GoodsInfo.cs" />
+    <Compile Include="quicksdk\GoogleSku.cs" />
+    <Compile Include="quicksdk\IOSProductInfo.cs" />
+    <Compile Include="quicksdk\OrderInfo.cs" />
+    <Compile Include="quicksdk\PayResult.cs" />
+    <Compile Include="quicksdk\QuickSDKListenerAOT.cs" />
+    <Compile Include="quicksdk\SimpleJSON\JSON.cs" />
+    <Compile Include="quicksdk\SimpleJSON\JSONArray.cs" />
+    <Compile Include="quicksdk\SimpleJSON\JSONBinaryTag.cs" />
+    <Compile Include="quicksdk\SimpleJSON\JSONClass.cs" />
+    <Compile Include="quicksdk\SimpleJSON\JSONData.cs" />
+    <Compile Include="quicksdk\SimpleJSON\JSONLazyCreator.cs" />
+    <Compile Include="quicksdk\SimpleJSON\JSONNode.cs" />
+    <Compile Include="quicksdk\StringUtil.cs" />
+    <Compile Include="quicksdk\UserInfo.cs" />
+    <Compile Include="RequestCmdID.cs" />
+    <Compile Include="SDKUtils.cs" />
+    <Compile Include="SDK\PlistDocument.cs" />
+    <Compile Include="SDK\PlistElement.cs" />
+    <Compile Include="SDK\PlistElementArray.cs" />
+    <Compile Include="SDK\PlistElementBoolean.cs" />
+    <Compile Include="SDK\PlistElementDict.cs" />
+    <Compile Include="SDK\PlistElementInteger.cs" />
+    <Compile Include="SDK\PlistElementString.cs" />
+    <Compile Include="Tp2Entry.cs" />
+    <Compile Include="Tp2GameStatus.cs" />
+    <Compile Include="Tp2LocaleId.cs" />
+    <Compile Include="Tp2Sdk.cs" />
+    <Compile Include="tss\TssInfoPublisher.cs" />
+    <Compile Include="tss\TssInfoReceiver.cs" />
+    <Compile Include="Win32Api\Win32Player.cs" />
+    <Compile Include="XGame\Aot\AESUtil.cs" />
+    <Compile Include="XGame\Aot\AotAssemblyMetaManager.cs" />
+    <Compile Include="XGame\Aot\AOTReference.cs" />
+    <Compile Include="XGame\Aot\AppConfig.cs" />
+    <Compile Include="XGame\Aot\AppVersion.cs" />
+    <Compile Include="XGame\Aot\AutoFullScreenRule.cs" />
+    <Compile Include="XGame\Aot\BuildInFileManifest.cs" />
+    <Compile Include="XGame\Aot\BundleStream.cs" />
+    <Compile Include="XGame\Aot\ButtonScaleEffect.cs" />
+    <Compile Include="XGame\Aot\ChannelID.cs" />
+    <Compile Include="XGame\Aot\CommonUtils.cs" />
+    <Compile Include="XGame\Aot\Crypto.cs" />
+    <Compile Include="XGame\Aot\DefaultDeliveryLoadServices.cs" />
+    <Compile Include="XGame\Aot\DefaultDeliveryQueryServices.cs" />
+    <Compile Include="XGame\Aot\DefaultLog.cs" />
+    <Compile Include="XGame\Aot\DontDestroyOnLoad.cs" />
+    <Compile Include="XGame\Aot\EncryptionKey.cs" />
+    <Compile Include="XGame\Aot\EncryptionSeed.cs" />
+    <Compile Include="XGame\Aot\EncryptUtil.cs" />
+    <Compile Include="XGame\Aot\EntryEvent.cs" />
+    <Compile Include="XGame\Aot\EPatchErrorCode.cs" />
+    <Compile Include="XGame\Aot\EPatchMode.cs" />
+    <Compile Include="XGame\Aot\FileOffsetDecryption.cs" />
+    <Compile Include="XGame\Aot\FileStreamDecryption.cs" />
+    <Compile Include="XGame\Aot\GameConfig.cs" />
+    <Compile Include="XGame\Aot\GameEntry.cs" />
+    <Compile Include="XGame\Aot\GamePatchEventManager.cs" />
+    <Compile Include="XGame\Aot\GameQueryServices.cs" />
+    <Compile Include="XGame\Aot\GradientDir.cs" />
+    <Compile Include="XGame\Aot\GradientEx.cs" />
+    <Compile Include="XGame\Aot\GradientMode.cs" />
+    <Compile Include="XGame\Aot\GraphicRaycasterBugFixedByHm.cs" />
+    <Compile Include="XGame\Aot\HashUtility.cs" />
+    <Compile Include="XGame\Aot\InnerLangConfig.cs" />
+    <Compile Include="XGame\Aot\LanguageList.cs" />
+    <Compile Include="XGame\Aot\LanguagePair.cs" />
+    <Compile Include="XGame\Aot\LoadUtility.cs" />
+    <Compile Include="XGame\Aot\LocaleIdentifier.cs" />
+    <Compile Include="XGame\Aot\LocalizationManager.cs" />
+    <Compile Include="XGame\Aot\LocalizationProfile.cs" />
+    <Compile Include="XGame\Aot\Lua.cs" />
+    <Compile Include="XGame\Aot\lua_CSFunction.cs" />
+    <Compile Include="XGame\Aot\MD5Helper.cs" />
+    <Compile Include="XGame\Aot\PatchManager.cs" />
+    <Compile Include="XGame\Aot\PatchStateGameVersion.cs" />
+    <Compile Include="XGame\Aot\PatchStateInitialize.cs" />
+    <Compile Include="XGame\Aot\PatchStateLoadHotUpdateDll.cs" />
+    <Compile Include="XGame\Aot\PatchStatePrepare.cs" />
+    <Compile Include="XGame\Aot\PatchStateUpdateManifest.cs" />
+    <Compile Include="XGame\Aot\PatchStateUpdateVersion.cs" />
+    <Compile Include="XGame\Aot\PlatformWrapperAOT.cs" />
+    <Compile Include="XGame\Aot\PreventCodeStrippingViaReferences.cs" />
+    <Compile Include="XGame\Aot\RawFileHash.cs" />
+    <Compile Include="XGame\Aot\ReflectionMethodsCache2.cs" />
+    <Compile Include="XGame\Aot\RemoteServices.cs" />
+    <Compile Include="XGame\Aot\RSAUtil.cs" />
+    <Compile Include="XGame\Aot\SafeAreaFullScreenFitterEx.cs" />
+    <Compile Include="XGame\Aot\SdkEvent.cs" />
+    <Compile Include="XGame\Aot\StreamingAssetsDefine.cs" />
+    <Compile Include="XGame\Aot\StreamingAssetsHelper.cs" />
+    <Compile Include="XGame\Aot\UIPatch.cs" />
+    <Compile Include="XGame\Aot\UISplash.cs" />
+    <Compile Include="XGame\Aot\UI_UpdateTip.cs" />
+    <Compile Include="XGame\Aot\UpdateLangUtil.cs" />
+    <Compile Include="XGame\Aot\UrlList.cs" />
+    <Compile Include="XGame\Aot\VarBoolean.cs" />
+    <Compile Include="XGame\Aot\VarByte.cs" />
+    <Compile Include="XGame\Aot\VarByteArray.cs" />
+    <Compile Include="XGame\Aot\VarChar.cs" />
+    <Compile Include="XGame\Aot\VarCharArray.cs" />
+    <Compile Include="XGame\Aot\VarColor.cs" />
+    <Compile Include="XGame\Aot\VarColor32.cs" />
+    <Compile Include="XGame\Aot\VarDateTime.cs" />
+    <Compile Include="XGame\Aot\VarDecimal.cs" />
+    <Compile Include="XGame\Aot\VarDouble.cs" />
+    <Compile Include="XGame\Aot\VarGameObject.cs" />
+    <Compile Include="XGame\Aot\VarInt16.cs" />
+    <Compile Include="XGame\Aot\VarInt32.cs" />
+    <Compile Include="XGame\Aot\VarInt64.cs" />
+    <Compile Include="XGame\Aot\VarMaterial.cs" />
+    <Compile Include="XGame\Aot\VarObject.cs" />
+    <Compile Include="XGame\Aot\VarQuaternion.cs" />
+    <Compile Include="XGame\Aot\VarRect.cs" />
+    <Compile Include="XGame\Aot\VarResCdn.cs" />
+    <Compile Include="XGame\Aot\VarResourceDownloader.cs" />
+    <Compile Include="XGame\Aot\VarSByte.cs" />
+    <Compile Include="XGame\Aot\VarSingle.cs" />
+    <Compile Include="XGame\Aot\VarString.cs" />
+    <Compile Include="XGame\Aot\VarTexture.cs" />
+    <Compile Include="XGame\Aot\VarTransform.cs" />
+    <Compile Include="XGame\Aot\VarUInt16.cs" />
+    <Compile Include="XGame\Aot\VarUInt32.cs" />
+    <Compile Include="XGame\Aot\VarUInt64.cs" />
+    <Compile Include="XGame\Aot\VarUnityObject.cs" />
+    <Compile Include="XGame\Aot\VarVector2.cs" />
+    <Compile Include="XGame\Aot\VarVector3.cs" />
+    <Compile Include="XGame\Aot\VarVector4.cs" />
+    <Compile Include="XGame\Aot\WindowsConfig.cs" />
+    <Compile Include="XGame\Aot\XLogFactory.cs" />
+    <Compile Include="XGame\Aot\XXTEA.cs" />
+    <Compile Include="XGame\HotUpdate\AssemblyManifest.cs" />
+    <Compile Include="XGame\HotUpdate\AssemblyMetaData.cs" />
+    <Compile Include="XGame\HotUpdate\HotUpdateAssemblyManifest.cs" />
+    <Compile Include="XGame\Settings\XGameHybridCLRSettings.cs" />
+    <Compile Include="XGame\Settings\XGameSettingsUtility.cs" />
+    <Compile Include="XGame\Utils\XLog.cs" />
+    <Compile Include="XGame\Utils\YooAssetUtility.cs" />
+    <Compile Include="XLua\AdditionalPropertiesAttribute.cs" />
+    <Compile Include="XLua\BlackListAttribute.cs" />
+    <Compile Include="XLua\CSharpCallLuaAttribute.cs" />
+    <Compile Include="XLua\DoNotGenAttribute.cs" />
+    <Compile Include="XLua\GCOptimizeAttribute.cs" />
+    <Compile Include="XLua\GenFlag.cs" />
+    <Compile Include="XLua\HotfixAttribute.cs" />
+    <Compile Include="XLua\HotfixDelegateAttribute.cs" />
+    <Compile Include="XLua\HotfixFlag.cs" />
+    <Compile Include="XLua\LuaCallCSharpAttribute.cs" />
+    <Compile Include="XLua\OptimizeFlag.cs" />
+    <Compile Include="XLua\ReflectionUseAttribute.cs" />
+    <Compile Include="XLua\SysGenConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XGameFramework\XGameFramework.csproj">
+      <Project>{4537328d-a356-4db0-9178-6b42aa7e3be1}</Project>
+      <Name>XGameFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YooAsset\YooAsset.csproj">
+      <Project>{4537328d-a356-4db0-9178-6b42aa7e3be2}</Project>
+      <Name>YooAsset</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
